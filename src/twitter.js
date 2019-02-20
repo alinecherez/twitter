@@ -1,32 +1,31 @@
-tweetButton.addEventListener("click", tweetPrint);
-
 let textInput = document.getElementById("textInput");
+let tweetButton = document.getElementById("tweetButton");
+let counter = document.getElementById("countDown");
 let tweetOutput = document.getElementById("tweetOutput");
+const tweetLenght = 140;
+
+tweetButton.addEventListener('click', tweetPrint);
+textInput.addEventListener('keyup', checkButton)
 
 function tweetPrint (){
 	let newPrint = document.createElement('p');
 	newPrint.innerHTML = textInput.value;
 	tweetOutput.appendChild(newPrint);
+	//limpeza
 	textInput.value = '';
+	counter.innerHTML = tweetLenght;
+	checkButton();
 }
 
 function countDown (){
-	const tweetLenght = 140;
 	let count = tweetLenght - textInput.value.length;
-	document.getElementById('countDown').innerHTML = count;
+	counter.innerHTML = count;
 }
 
-// document.getElementById("tweetButton").disabled = true;
-
-// function countChar(valor) {
-//  let tweetLenght = 140;
-//  let total = valor.length;
-//  if(total < tweetLenght && total >= 0) {
-//    document.getElementById("tweetButton").disabled = false;
-//      let resto = tweetLenght - total;
-//      document.getElementById('countdown').innerHTML = resto;
-//  } else {
-//      document.getElementById('textInput').value = valor.substr(0, tweetLenght);
-//      document.getElementById("tweetButton").disabled = true;
-//  }
-// }
+function checkButton () {
+  if (textInput.value.length <= tweetLenght && textInput.value.length > 0) {
+		tweetButton.removeAttribute('disabled');
+  } else {
+		tweetButton.setAttribute('disabled', true);
+  }
+}
