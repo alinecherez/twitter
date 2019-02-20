@@ -19,6 +19,15 @@ function tweetPrint (){
 
 function countDown (){
 	let count = tweetLenght - textInput.value.length;
+		if (count <= 20 && count > 10){
+		    counter.style.color = 'orange';		
+	} else{
+		if (count <= 10){
+			counter.style.color = 'red';
+		} else{
+			counter.style.color = 'black';
+		}
+	}
 	counter.innerHTML = count;
 }
 
