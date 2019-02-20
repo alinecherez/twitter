@@ -8,13 +8,16 @@
 </head>
 
 <body>
-  <h1>Twitter</h1>
-  <textarea name="textInput" id="textInput" type="text" required placeholder="O que está acontecendo?" rows="1"
-    cols="40" oninput="countDown()" onkeypress="return pressEnterRow(event)"></textarea>
-  <input type="submit" id="tweetButton" class="myButton" value="Tweet" disabled />
+  <img id="logo" src="img/twitter-name.png" alt="Nome Twitter">
+  <div class="input-button">
+    <textarea name="textInput" id="textInput" type="text" required placeholder="O que está acontecendo?" rows="1"
+      cols="40" oninput="countDown()"></textarea>
+    <input type="submit" id="tweetButton" class="myButton" value="Tweet" disabled />
+  </div>
   <div id="countDown">140</div>
   <p id="tweetOutput"></p>
   <script src="src/twitter.js"></script>
+  <script src="src/moment.js"></script>
 </body>
 
 </html>
