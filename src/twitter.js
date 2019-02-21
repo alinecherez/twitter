@@ -7,6 +7,7 @@ const tweetLenght = 140;
 tweetButton.addEventListener('click', tweetPrint);
 textInput.addEventListener('keyup', checkButton);
 
+
 function tweetPrint() {
 	let newPrint = document.createElement('p');
 	newPrint.innerHTML = textInput.value.replace(/\r?\n/g, '<br />') + '<hr> <i class="far fa-clock"></i> Postado: ' + moment().format('HH:mm');
