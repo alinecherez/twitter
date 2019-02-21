@@ -1,10 +1,27 @@
 body {
-    background-color: #91e5ff;
+		background-color: #91e5ff;
+		display: flex;
+}
+.images{
+	display: flex;
+	flex-direction: column;
+	width: 45%;
+	margin-left: 4rem;
 }
 #logo {
-	display: flex;
-	width: 20%;
-	padding-bottom: 2rem;		
+	justify-content: center;
+	width: 50%;
+	padding-bottom: 1rem;
+}
+#profile {
+	justify-content: center;
+	width: 90%;
+	padding-bottom: 2rem;
+	margin-left: 0.5rem;
+	border-radius:6px;
+}
+.tweets{
+	width: 50%;
 }
 .input-button{
 	display: flex;
@@ -14,6 +31,7 @@ body {
 }
 #textInput {
 	margin: 0.5rem;
+	padding: 0.2rem;
   background-color:#ffffff;
 	border-radius:6px;
 	border:1px solid #ffffff;
@@ -22,7 +40,7 @@ body {
 	font-size:14px;
 	text-decoration:none;
   text-shadow:0px 1px 0px #ffffff;
-  text-align: left;
+	text-align: left;
 }
 #tweetButton {
 	margin: 1rem;
@@ -48,7 +66,20 @@ body {
 	font-size: 16px;
 	color: white;
 	font-weight: bold;
-
+}
+#tweetOutput {
+	display: flex;
+	flex-direction: column-reverse
+ }
+ #feed{
+	font-family: Arial;
+	font-size: 50px;
+	color: white;
+	/* color:#91e5ff;
+	text-shadow: 10px 10px white;*/
+	margin: 0.5rem;
+	padding: 1rem;
+	flex-wrap: wrap;
 }
 p{
 	font-family: Arial;
@@ -57,6 +88,8 @@ p{
 	background-color: white;
 	border-radius:6px;
 	margin: 0.5rem;
+	padding: 1rem;
 	flex-wrap: wrap;
-	width: 50%;
+	width: 100%;
+	word-break: break-word;	
 }

@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="utf-8">
   <title>Twitter</title>
   <link rel="stylesheet" href="src/style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
-
 <body>
-  <img id="logo" src="img/twitter-name.png" alt="Nome Twitter">
-  <div class="input-button">
-    <textarea name="textInput" id="textInput" type="text" required placeholder="O que está acontecendo?" rows="1"
-      cols="40" oninput="countDown()"></textarea>
-    <input type="submit" id="tweetButton" class="myButton" value="Tweet" disabled />
+  <div class="images">
+    <img id="logo" src="img/twitter-name.png" alt="Nome Twitter">
+    <img id="profile" src="img/perfil-twitter.png" alt="Perfil Twitter">
   </div>
-  <div id="countDown">140</div>
-  <p id="tweetOutput"></p>
+  <div class="tweets">
+    <h1 id="feed">Seus tweets</h1>
+    <div class="input-button">
+      <textarea name="textInput" id="textInput" type="text" required placeholder="O que está acontecendo?" rows="1"
+        cols="40" oninput="countDown()"></textarea>
+      <input type="submit" id="tweetButton" class="myButton" value="Tweet" disabled />
+    </div>
+    <div id="countDown">140</div>
+    <div id="tweetOutput"></div>
+  </div>
   <script src="src/twitter.js"></script>
   <script src="src/moment.js"></script>
 </body>
-
 </html>

@@ -7,10 +7,9 @@ const tweetLenght = 140;
 tweetButton.addEventListener('click', tweetPrint);
 textInput.addEventListener('keyup', checkButton);
 
-
 function tweetPrint() {
 	let newPrint = document.createElement('p');
-	newPrint.innerHTML = textInput.value.replace(/\r?\n/g, '<br />') + " - " + moment().format('LT');
+	newPrint.innerHTML = textInput.value.replace(/\r?\n/g, '<br />') + '<hr> <i class="far fa-clock"></i> Postado: ' + moment().format('HH:mm');
 	tweetOutput.appendChild(newPrint);
 	//limpeza
 	textInput.value = '';
@@ -48,9 +47,3 @@ function OnInput() {
 	this.style.height = 'auto';
 	this.style.height = (this.scrollHeight) + 'px';
 }
-
-// function pressEnterRow (event){
-//   if (event.keyCode === 13) {
-//     textInput.setAttribute('rows', parseInt(textInput.getAttribute('rows')) +1);
-//   }
-// }
